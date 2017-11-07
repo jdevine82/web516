@@ -1,0 +1,29 @@
+
+
+<%= bootstrap_form_for(@incident) do |f| %>
+
+
+<div class="field">
+    <%= f.number_field :code, :value=>@animals.code%>
+  </div>
+
+  <div class="field">
+  <%= f.text_field :family, :value=>@animals.family%>
+  <div class="field">
+    <%= f.number_field :officer, :value=>@current_officer.number %>
+  </div>
+  <div class="field">
+    <%= f.text_area :reason %>
+  </div>
+  
+  <div class="field">
+    <%= f.datetime_select :whenfound %>
+  </div>
+  
+  <div class="field">
+    <%= f.text_area :wherefound %>
+  </div>
+  <div class="actions btn">
+    <%= f.submit %>
+  </div>
+<% end %>

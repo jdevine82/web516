@@ -1,0 +1,24 @@
+
+
+<p>
+  <strong>Animal:</strong>
+  <%= @animal.animalsname %>
+</p>
+
+<p>
+  <strong>Npws id:</strong>
+  <%= @animal.nwpsid %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @animal.family %>
+</p>
+
+<p>
+  <strong>code:</strong>
+  <%= @animal.code %>
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal), :class => "btn btn-info" %> |
+<%= link_to 'Back', animals_path, :class => "btn btn-warning" %>

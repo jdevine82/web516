@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  npws: 1
+  officer: 1
+  reason: MyText
+  whenfound: 2017-10-07
+  wherefound: MyText
+
+two:
+  npws: 1
+  officer: 1
+  reason: MyText
+  whenfound: 2017-10-07
+  wherefound: MyText

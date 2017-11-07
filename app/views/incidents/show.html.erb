@@ -1,0 +1,29 @@
+
+
+<p>
+  <strong>Code:</strong>
+  <%= @incident.code %>
+</p>
+
+<p>
+  <strong>Officer:</strong>
+  <%= @incident.officer %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @incident.reason %>
+</p>
+
+<p>
+  <strong>Whenfound:</strong>
+  <%= @incident.whenfound %>
+</p>
+
+<p>
+  <strong>Wherefound:</strong>
+  <%= @incident.wherefound %>
+</p>
+<%= link_to 'New Incident', new_incident_path, :class => "btn btn-success"%>
+<%= link_to 'Edit', edit_incident_path(@incident),:class => "btn btn-info" %> 
+<%= link_to 'Back', incidents_path,:class => "btn btn-warning" %>

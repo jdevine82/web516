@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Incident Response Application</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+<h1> Incident Response Application </h1>
+</div>
+<nav class="navbar navbar-default">
+
+    <ul class="nav navbar-nav ">
+ <%if logged_in? then %>  <li><%= link_to "Incidents",   '/incidents' %></li> <%end%>
+           <%if logged_in? then %>   <li><%= link_to "Officers",   '/officers' %></li> <%end%>
+          <%if not logged_in? then %>   <li><%= link_to "Log in", '/login' %></li> <%end%>
+         <%if logged_in? then %>   <li><%= link_to "Log out",logout_path, method: :delete %></li> <%end%>
+          <%if not logged_in? then %>    <li><%= link_to "Signup", new_officer_path %></li> <%end%>
+    </ul>
+  </div>
+</nav>
+ <div class="container">
+ <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+
+<%= yield %>
+</div>
+</body>
+</html>

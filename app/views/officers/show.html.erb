@@ -1,0 +1,16 @@
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @officer.first_name %>
+
+  <%= @officer.last_name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @officer.number %>
+</p>
+
+<%= link_to 'Edit', edit_officer_path(@officer), :class=> "btn btn-info" %> |
+<%= link_to 'Back', officers_path, :class => "btn btn-warning" %>

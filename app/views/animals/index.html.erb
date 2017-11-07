@@ -1,0 +1,47 @@
+
+
+<%= form_tag(animals_path, :method => "get", id: "search-form") do %>
+<!-- text field tag=action,args,identifier,placeholdertext... -->
+<%= text_field_tag :search, params[:search], class: "search-query", placeholder: "namesearch", type: "search", data: {autocomplete: autocomplete_animal_animalsname_animals_path} %>  
+<%= submit_tag "Search" %>
+<%end%>
+
+<script type="text/javascript" charset="utf-8">
+  $('#search').bind('railsAutocomplete.select', function(event, data){
+  $('#search-form').submit()
+  });
+</script>
+
+
+<h1>Listing Animals</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Animal</th>
+      <th>Family</th>
+      <th>Npws id</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animals.each do |animal| %>
+      <tr>
+        <td><%= animal.animalsname %></td>
+        <td><%= animal.family %></td>
+        <td><%= animal.nwpsid %></td>
+        <td><%= animal.code %></td>
+        <td><%= link_to 'Show', animal, :class => "btn  btn-success" %></td>
+        <td><%= link_to 'Edit', edit_animal_path(animal), :class => "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Animal', new_animal_path, :class => "btn btn-success" %>
