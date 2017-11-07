@@ -16,6 +16,7 @@
     <ul class="nav navbar-nav ">
  <%if logged_in? then %>  <li><%= link_to "Incidents",   '/incidents' %></li> <%end%>
            <%if logged_in? then %>   <li><%= link_to "Officers",   '/officers' %></li> <%end%>
+            <%if logged_in? then %>   <li><%= link_to "Animals",   '/animals' %></li> <%end%>
           <%if not logged_in? then %>   <li><%= link_to "Log in", '/login' %></li> <%end%>
          <%if logged_in? then %>   <li><%= link_to "Log out",logout_path, method: :delete %></li> <%end%>
           <%if not logged_in? then %>    <li><%= link_to "Signup", new_officer_path %></li> <%end%>
