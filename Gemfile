@@ -6,7 +6,8 @@ gem 'rails', '4.2.5'
 gem 'bcrypt'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass', '3.3.7'
-gem 'sqlite3'
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -28,6 +29,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap_form'
 
+group :productiont do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pg'
+end
 
 
 
@@ -43,6 +48,7 @@ gem 'bootstrap_form'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
