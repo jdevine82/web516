@@ -21,5 +21,4 @@ test:
   database: db/test.sqlite3
 
 production:
-encoding: utf8
-  pool: 15
+ url: <%= ENV["DATABASE_URL"] %>
