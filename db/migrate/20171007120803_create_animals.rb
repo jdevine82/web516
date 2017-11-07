@@ -1,11 +1,10 @@
 class CreateAnimals < ActiveRecord::Migration
-  def change
-    create_table :animals do |t|
-      t.string :name
-      t.integer :npws
-      t.string :family
-
-      t.timestamps null: false
-    end
+ create_table "animals", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.decimal  "nwpsid"
+    t.text     "animalsname"
+    t.text     "family"
+    t.integer  "code"
   end
 end
