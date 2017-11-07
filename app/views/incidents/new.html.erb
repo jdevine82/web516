@@ -7,7 +7,7 @@
 <%= submit_tag "Search" %>
 <%end%>
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript" >
   $('#search').bind('railsAutocomplete.select', function(event, data){
   $('#search-form').submit()
   });
@@ -32,6 +32,7 @@
   <%= f.text_field :family, :value=>@animals.family,:disabled=>true%>
    <%= f.hidden_field :family, :value=>@animals.family%>
    <%end%>
+   </div>
 
   <div class="field">
     <% if not @animals.nil? then %>
