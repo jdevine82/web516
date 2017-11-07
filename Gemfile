@@ -31,7 +31,7 @@ gem 'bootstrap_form'
 
 group :productiont do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pg'
+  gem 'pg', '0.20'
 end
 
 
