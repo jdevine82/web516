@@ -18,19 +18,26 @@
 
  
 <div class="field">
+  <% if not @animals.nil? then %>
   
-    <%= f.number_field :code, :value=>@animals.code, step: 1, :disabled=>true%>
+    <%= f.number_field :code, :value=>@animals.code , step: 1, :disabled=>true%>
     <%= f.hidden_field :code, :value=>@animals.code%>
+    <%end%>
 
 </div>
  
 
   <div class="field">
+  <% if not @animals.nil? then %>
   <%= f.text_field :family, :value=>@animals.family,:disabled=>true%>
-   <%= f.hidden_field :officer, :value=>@animals.family%>
+   <%= f.hidden_field :family, :value=>@animals.family%>
+   <%end%>
+
   <div class="field">
+    <% if not @animals.nil? then %>
     <%= f.number_field :officer, :value=>@current_officer.number,:disabled=>true,step: 1 %>
-    <%= f.hidden_field :officer, :value=>@current_officer.number%>
+    <%= f.hidden_field :officer, :value=>@current_officer.number %>
+      <%end%>
   </div>
   <div class="field">
     <%= f.text_area :reason %>

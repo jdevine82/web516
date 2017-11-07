@@ -21,12 +21,13 @@ class IncidentsController < ApplicationController
   def new
    
     @incident = Incident.new
+    
      if params[:search]
       @animals = Animal.animalsname_like("%#{params[:search]}%").order('animalsname')
       @animals= @animals.first
-      if @animals=== nil then @animals = Animal.first end
+    
     else
-  @animals=Animal.first
+  @animals=nil
   end
 end
 
